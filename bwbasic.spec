@@ -51,14 +51,13 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
            $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
 %{__make} install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 cp -f bwbtest/* $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
-gzip -9nf README README.patch01 README.patch02 bwbasic.doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README README.patch01 README.patch02 bwbasic.doc
 %attr(755,root,root) %{_bindir}/bwbasic
 
 %files examples
