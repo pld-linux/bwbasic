@@ -6,8 +6,11 @@ Release:	1
 License:	GPL
 Group:		Development/Languages
 Source0:	%{name}-2.20.tar.bz2
+# Source0-md5:	489d3dab12f7edf1d210682e6af04059
 Source1:	bwb-2.20-patch01.tar.bz2
+# Source1-md5:	949b085551398ed8c756d9d15920ff6d
 Source2:	bwb-2.20-patch02.tar.bz2
+# Source2-md5:	d7b712d1349638dff168f3418e995a63
 #Source0:	ftp://ftp.rahul.net/pub/rhn/%{name}-%{version}.tar.Z
 #Source1:	ftp://ftp.rahul.net/pub/rhn/bwb-2.20-patch01.tar.Z.uu.txt
 #Source2:	ftp://ftp.rahul.net/pub/rhn/bwb-2.20-patch02.tar.Z.uu.txt
