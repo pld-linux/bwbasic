@@ -1,0 +1,46 @@
+--- Makefile.Linux
++++ Makefile.Linux	1998/09/22 09:11:17
+@@ -0,0 +1,11 @@
++#
++# Makefile.Linux to integrate package into source tree of S.u.S.E.-Linux.
++#
++# Copyright (c) 1998 S.u.S.E. GmbH Fuerth, Germany.   
++#
++# please send bugfixes or comments to feedback@suse.de.
++#
++#
++extract:
++	tar xzfp ../bwb-2.20-patch01.tar.gz
++
+--- Makefile.in
++++ Makefile.in	1998/09/22 09:07:59
+@@ -23,7 +23,7 @@
+ # Revised by JBV
+ #LDFLAGS = -s
+ 
+-prefix = /usr/local
++prefix = $(DESTDIR)/usr
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ 
+--- bwbasic.c
++++ bwbasic.c	1998/09/22 09:47:41
+@@ -51,7 +51,7 @@
+ char *bwb_ebuf;				/* error buffer */
+ static char *read_line;
+ int bwb_trace = FALSE;
+-FILE *errfdevice = stderr;              /* output device for error messages */
++FILE *errfdevice;              /* output device for error messages */
+ 
+ #if HAVE_LONGJUMP
+ jmp_buf mark;
+--- bwx_tty.c
++++ bwx_tty.c	1998/09/22 09:47:17
+@@ -75,6 +75,7 @@
+ #endif
+    {
+ 
++   errfdevice = stderr;
+    bwb_init( argc, argv );
+ 
+ #if HAVE_LONGJUMP /* Revised by JBV (bug found by DD) */
