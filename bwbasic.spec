@@ -43,7 +43,7 @@ mv -f bwb-2.20-patch01/* .
 mv -f bwb-2.20-patch02/* .
 
 ./configure --prefix=$RPM_BUILD_ROOT%{_prefix}
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz 
+%doc *.gz
 %attr(755,root,root) %{_bindir}/bwbasic
 
 %files examples
