@@ -1,18 +1,21 @@
+Summary:	Basic interpreter under Linux
+Summary(pl):	Interpreter BASIC-a dla Linuxa
 Name:		bwbasic
+Version:	2.20.2
+Release:	1
 License:	GPL
 Group:		Development/Languages
 Group(de):	Entwicklung/Sprachen
 Group(pl):	Programowanie/Jêzyki
-Version:	2.20.2
-Release:	1
-Summary:	Basic interpreter under Linux
-Summary(pl):	Interpreter BASIC-a dla Linuxa
 Source0:	%{name}-2.20.tar.bz2
 Source1:	bwb-2.20-patch01.tar.bz2
 Source2:	bwb-2.20-patch02.tar.bz2
+#Source0:	ftp://ftp.rahul.net/pub/rhn/%{name}-%{version}.tar.Z
+#Source1:	ftp://ftp.rahul.net/pub/rhn/bwb-2.20-patch01.tar.Z.uu.txt
+#Source2:	ftp://ftp.rahul.net/pub/rhn/bwb-2.20-patch02.tar.Z.uu.txt
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-CFLAGS.patch
-Url:		ftp://ftp.rahul.net/pub/rhn/
+URL:		ftp://ftp.rahul.net/pub/rhn/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,11 +25,11 @@ A Basic interpreter.
 Interpreter BASIC-a dla Linuxa.
 
 %package examples
+Summary:	Example files for bwBasic
+Summary(pl):	Pliki przyk³adowe dla bwbasica
 Group:		Development/Languages
 Group(de):	Entwicklung/Sprachen
 Group(pl):	Programowanie/Jêzyki
-Summary:	Example files for bwBasic
-Summary(pl):	Pliki przyk³adowe dla bwbasica
 
 %description examples
 Example sources for bwbasic.
