@@ -5,8 +5,6 @@ Version:	2.20.2
 Release:	1
 License:	GPL
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 Source0:	%{name}-2.20.tar.bz2
 Source1:	bwb-2.20-patch01.tar.bz2
 Source2:	bwb-2.20-patch02.tar.bz2
@@ -28,8 +26,6 @@ Interpreter BASIC-a dla Linuxa.
 Summary:	Example files for bwBasic
 Summary(pl):	Pliki przyk³adowe dla bwbasica
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 
 %description examples
 Example sources for bwbasic.
