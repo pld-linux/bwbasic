@@ -37,7 +37,7 @@ Example sources for bwbasic.
 Programy przyk³adowe dla bwbasica.
 
 %prep
-%setup -q -n bwbasic-2.20 -a 1 -a 2
+%setup -q -n %{name}-2.20 -a1 -a2
 %patch0
 %patch1 -p1
 
@@ -45,18 +45,19 @@ Programy przyk³adowe dla bwbasica.
 mv -f bwb-2.20-patch01/* .
 mv -f bwb-2.20-patch02/* .
 
-./configure \
-	--prefix=$RPM_BUILD_ROOT%{_prefix}
+%configure
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
-           $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
+           $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 	   
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT%{_prefix}
-cp -f bwbtest/* $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
+	bindir=$RPM_BUILD_ROOT%{_bindir}
+
+cp -f bwbtest/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,4 +69,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files examples
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_prefix}/src/%{name}-examples
+%{_examplesdir}/%{name}-%{version}
