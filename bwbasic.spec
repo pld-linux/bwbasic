@@ -1,5 +1,5 @@
 Summary:	Basic interpreter under Linux
-Summary(pl):	Interpreter BASIC-a dla Linuxa
+Summary(pl):	Interpreter BASIC-a dla Linuksa
 Name:		bwbasic
 Version:	2.20.2
 Release:	1
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A Basic interpreter.
 
 %description -l pl
-Interpreter BASIC-a dla Linuxa.
+Interpreter BASIC-a dla Linuksa.
 
 %package examples
 Summary:	Example files for bwBasic
