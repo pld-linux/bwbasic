@@ -45,14 +45,17 @@ Programy przyk³adowe dla bwbasica.
 mv -f bwb-2.20-patch01/* .
 mv -f bwb-2.20-patch02/* .
 
-./configure --prefix=$RPM_BUILD_ROOT%{_prefix}
+./configure \
+	--prefix=$RPM_BUILD_ROOT%{_prefix}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
            $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
-%{__make} install DESTDIR=$RPM_BUILD_ROOT%{_prefix}
+	   
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT%{_prefix}
 cp -f bwbtest/* $RPM_BUILD_ROOT%{_prefix}/src/%{name}-examples
 
 %clean
