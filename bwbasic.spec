@@ -52,7 +52,7 @@ mv -f bwb-2.20-patch02/* .
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
-           $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+	$RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	bindir=$RPM_BUILD_ROOT%{_bindir}
