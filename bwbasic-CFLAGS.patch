@@ -1,0 +1,12 @@
+diff -ur bwbasic-2.20/Makefile.in bwbasic-2.20.new/Makefile.in
+--- bwbasic-2.20/Makefile.in	Sat Nov 25 23:32:18 1995
++++ bwbasic-2.20.new/Makefile.in	Thu Jun 22 18:50:04 2000
+@@ -18,7 +18,7 @@
+ 
+ # Revised by JBV
+ #CFLAGS = -O
+-CFLAGS = -g -ansi
++CFLAGS = $(RPM_OPT_FLAGS) -g -ansi 
+ 
+ # Revised by JBV
+ #LDFLAGS = -s
