@@ -38,8 +38,8 @@ Programy przykładowe dla bwbasica.
 
 %prep
 %setup -q -n %{name}-2.20 -a1 -a2
-%patch0
-%patch1 -p1
+%patch -P0
+%patch -P1 -p1
 
 %build
 mv -f bwb-2.20-patch01/* .
